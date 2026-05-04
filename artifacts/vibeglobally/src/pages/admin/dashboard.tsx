@@ -28,25 +28,29 @@ export default function Dashboard() {
       title: "Total Inquiries",
       value: stats?.totalContacts || 0,
       icon: Users,
-      color: "text-blue-500"
+      color: "text-blue-500",
+      badge: null
     },
     {
       title: "New Leads",
       value: stats?.newContacts || 0,
       icon: MailPlus,
-      color: "text-accent"
+      color: "text-accent",
+      badge: null
     },
     {
       title: "Responded",
       value: stats?.respondedContacts || 0,
       icon: CheckCircle2,
-      color: "text-primary"
+      color: "text-primary",
+      badge: null
     },
     {
       title: "Testimonials",
       value: stats?.totalTestimonials || 0,
       icon: MessageSquareQuote,
-      color: "text-purple-500"
+      color: "text-purple-500",
+      badge: null
     }
   ];
 

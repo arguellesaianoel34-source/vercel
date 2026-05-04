@@ -253,7 +253,7 @@ export default function ClientsEditor() {
                     </div>
                     <div className="flex gap-1 w-full">
                       <input
-                        ref={(el) => (fileInputRefs.current[i] = el)}
+                        ref={(el) => { fileInputRefs.current[i] = el; }}
                         type="file"
                         accept="image/*"
                         className="hidden"

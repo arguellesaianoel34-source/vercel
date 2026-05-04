@@ -164,5 +164,30 @@ export async function handleBrowserApiRequest(url: string, init: RequestInit = {
   // Healthz
   if (path === "/api/healthz") return { status: "ok" };
 
+  // Email endpoints - these MUST be handled by the real backend
+  // but we proxy them here so they work with the browser-side mock auth
+  if (path === "/api/email/test-connection" || path === "/api/email/send-test") {
+    const token = localStorage.getItem(SESSION_KEY);
+    const headers: Record<string, string> = {
+      "Content-Type": "application/json",
+    };
+
+    if (token) {
+      headers["Authorization"] = `Bearer ${token}`;
+    }
+
+    const response = await fetch(url, {
+      method,
+      headers,
+      body: init.body,
+    });
+
+    const result = await response.json();
+    if (!response.ok) {
+      throw { status: response.status, ...result };
+    }
+    return result;
+  }
+
   throw new Error(`Mock API: Unknown endpoint ${method} ${path}`);
 }

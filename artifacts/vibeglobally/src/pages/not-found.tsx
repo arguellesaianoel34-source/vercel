@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <>
       <SEOHead
-        title="404 - Page Not Found | VibeGlobally"
+        title="404 - Page Not Found | #VibeAlong"
         description="The page you're looking for doesn't exist. Return to VibeGlobally's homepage to explore our virtual assistant services."
         noindex={true}
       />

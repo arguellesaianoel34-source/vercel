@@ -41,9 +41,9 @@ export default function PrivacyPolicy() {
   return (
     <>
       <SEOHead
-        title="Privacy Policy - VibeGlobally Virtual Assistant Services"
-        description="Read VibeGlobally's privacy policy to understand how we collect, use, and protect your personal information when using our virtual assistant services."
-        keywords="privacy policy, data protection, personal information, VibeGlobally privacy"
+        title="Privacy Policy | #VibeAlong"
+        description="Read #VibeAlong's privacy policy to understand how we collect, use, and protect your personal information when using our virtual assistant services."
+        keywords="privacy policy, data protection, personal information, #VibeAlong privacy"
         canonical="https://vibeglobally.com/privacy-policy"
       />
       <div className="min-h-screen flex flex-col bg-background">

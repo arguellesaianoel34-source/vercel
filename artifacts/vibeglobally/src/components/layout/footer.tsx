@@ -42,10 +42,13 @@ export function Footer() {
 
   // Reset click count after 2 seconds
   useEffect(() => {
+    let timer: NodeJS.Timeout;
     if (clickCount > 0) {
-      const timer = setTimeout(() => setClickCount(0), 2000);
-      return () => clearTimeout(timer);
+      timer = setTimeout(() => setClickCount(0), 2000);
     }
+    return () => {
+      if (timer) clearTimeout(timer);
+    };
   }, [clickCount]);
 
   const handleLogoClick = (e: React.MouseEvent) => {

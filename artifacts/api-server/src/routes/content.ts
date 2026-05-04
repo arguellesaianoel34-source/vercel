@@ -238,7 +238,7 @@ const DEFAULT_CONTENT: Record<string, unknown> = {
   },
 };
 
-const ALLOWED_SECTIONS = ["hero", "services", "results", "tools", "clients", "values", "contact", "team", "faq"];
+const ALLOWED_SECTIONS = ["hero", "services", "results", "tools", "clients", "values", "contact", "team", "faq", "privacy", "terms", "smtp"];
 
 router.get("/content/:section", async (req, res) => {
   try {

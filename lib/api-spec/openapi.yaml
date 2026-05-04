@@ -20,8 +20,6 @@ tags:
     description: Dashboard statistics
   - name: content
     description: Site content management
-  - name: settings
-    description: Admin app settings (SMTP, etc.)
 paths:
   /healthz:
     get:
@@ -264,7 +262,7 @@ paths:
           required: true
           schema:
             type: string
-            enum: [hero, services, results, tools, clients, team, values, contact, faq, smtp]
+            enum: [hero, services, results, tools, clients, team, values, contact, faq, privacy, terms, sampleCalls, facebookReview, logo, smtp]
       responses:
         "200":
           description: Site content
@@ -288,7 +286,7 @@ paths:
           required: true
           schema:
             type: string
-            enum: [hero, services, results, tools, clients, team, values, contact, faq, smtp]
+            enum: [hero, services, results, tools, clients, team, values, contact, faq, privacy, terms, sampleCalls, facebookReview, logo]
       requestBody:
         required: true
         content:
@@ -470,6 +468,9 @@ components:
           type: string
         rating:
           type: integer
+        facebookUrl:
+          type: string
+          nullable: true
         createdAt:
           type: string
       required:
@@ -491,6 +492,9 @@ components:
           type: string
         rating:
           type: integer
+        facebookUrl:
+          type: string
+          nullable: true
       required:
         - clientName
         - content

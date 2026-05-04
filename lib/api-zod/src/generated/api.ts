@@ -213,6 +213,11 @@ export const GetSiteContentParams = zod.object({
     "values",
     "contact",
     "faq",
+    "privacy",
+    "terms",
+    "sampleCalls",
+    "facebookReview",
+    "logo",
     "smtp",
   ]),
 });
@@ -236,6 +241,11 @@ export const UpdateSiteContentParams = zod.object({
     "values",
     "contact",
     "faq",
+    "privacy",
+    "terms",
+    "sampleCalls",
+    "facebookReview",
+    "logo",
     "smtp",
   ]),
 });

@@ -1127,6 +1127,11 @@ export const getGetSiteContentUrl = (
     | "values"
     | "contact"
     | "faq"
+    | "privacy"
+    | "terms"
+    | "sampleCalls"
+    | "facebookReview"
+    | "logo"
     | "smtp",
 ) => {
   return `/api/content/${section}`;
@@ -1143,6 +1148,11 @@ export const getSiteContent = async (
     | "values"
     | "contact"
     | "faq"
+    | "privacy"
+    | "terms"
+    | "sampleCalls"
+    | "facebookReview"
+    | "logo"
     | "smtp",
   options?: RequestInit,
 ): Promise<SiteContentResponse> => {
@@ -1163,6 +1173,11 @@ export const getGetSiteContentQueryKey = (
     | "values"
     | "contact"
     | "faq"
+    | "privacy"
+    | "terms"
+    | "sampleCalls"
+    | "facebookReview"
+    | "logo"
     | "smtp",
 ) => {
   return [`/api/content/${section}`] as const;
@@ -1182,6 +1197,11 @@ export const getGetSiteContentQueryOptions = <
     | "values"
     | "contact"
     | "faq"
+    | "privacy"
+    | "terms"
+    | "sampleCalls"
+    | "facebookReview"
+    | "logo"
     | "smtp",
   options?: {
     query?: UseQueryOptions<
@@ -1235,6 +1255,11 @@ export function useGetSiteContent<
     | "values"
     | "contact"
     | "faq"
+    | "privacy"
+    | "terms"
+    | "sampleCalls"
+    | "facebookReview"
+    | "logo"
     | "smtp",
   options?: {
     query?: UseQueryOptions<
@@ -1268,6 +1293,11 @@ export const getUpdateSiteContentUrl = (
     | "values"
     | "contact"
     | "faq"
+    | "privacy"
+    | "terms"
+    | "sampleCalls"
+    | "facebookReview"
+    | "logo"
     | "smtp",
 ) => {
   return `/api/content/${section}`;
@@ -1284,6 +1314,11 @@ export const updateSiteContent = async (
     | "values"
     | "contact"
     | "faq"
+    | "privacy"
+    | "terms"
+    | "sampleCalls"
+    | "facebookReview"
+    | "logo"
     | "smtp",
   updateSiteContentBody: UpdateSiteContentBody,
   options?: RequestInit,
@@ -1314,6 +1349,11 @@ export const getUpdateSiteContentMutationOptions = <
         | "values"
         | "contact"
         | "faq"
+        | "privacy"
+        | "terms"
+        | "sampleCalls"
+        | "facebookReview"
+        | "logo"
         | "smtp";
       data: BodyType<UpdateSiteContentBody>;
     },
@@ -1334,6 +1374,11 @@ export const getUpdateSiteContentMutationOptions = <
       | "values"
       | "contact"
       | "faq"
+      | "privacy"
+      | "terms"
+      | "sampleCalls"
+      | "facebookReview"
+      | "logo"
       | "smtp";
     data: BodyType<UpdateSiteContentBody>;
   },
@@ -1361,6 +1406,11 @@ export const getUpdateSiteContentMutationOptions = <
         | "values"
         | "contact"
         | "faq"
+        | "privacy"
+        | "terms"
+        | "sampleCalls"
+        | "facebookReview"
+        | "logo"
         | "smtp";
       data: BodyType<UpdateSiteContentBody>;
     }
@@ -1400,6 +1450,11 @@ export const useUpdateSiteContent = <
         | "values"
         | "contact"
         | "faq"
+        | "privacy"
+        | "terms"
+        | "sampleCalls"
+        | "facebookReview"
+        | "logo"
         | "smtp";
       data: BodyType<UpdateSiteContentBody>;
     },
@@ -1420,6 +1475,11 @@ export const useUpdateSiteContent = <
       | "values"
       | "contact"
       | "faq"
+      | "privacy"
+      | "terms"
+      | "sampleCalls"
+      | "facebookReview"
+      | "logo"
       | "smtp";
     data: BodyType<UpdateSiteContentBody>;
   },

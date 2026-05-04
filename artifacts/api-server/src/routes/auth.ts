@@ -94,10 +94,23 @@ router.get("/auth/me", (req, res) => {
 });
 
 export function requireAuth(req: any, res: any, next: any) {
-  const token = req.cookies?.[SESSION_COOKIE] as string | undefined;
-  if (!token) return res.status(401).json({ error: "Unauthorized" });
+  let token = req.cookies?.[SESSION_COOKIE] as string | undefined;
+
+  // Also support Bearer token in Authorization header
+  const authHeader = req.get("authorization");
+  if (!token && authHeader?.startsWith("Bearer ")) {
+    token = authHeader.substring(7);
+  }
+
+  if (!token) {
+    return res.status(401).json({ error: "Unauthorized", message: "No session token provided" });
+  }
+
   const username = verifyToken(token);
-  if (!username) return res.status(401).json({ error: "Unauthorized" });
+  if (!username) {
+    return res.status(401).json({ error: "Unauthorized", message: "Invalid or expired session token" });
+  }
+
   req.adminUsername = username;
   next();
 }

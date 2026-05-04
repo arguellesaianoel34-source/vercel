@@ -88,6 +88,7 @@ export interface Testimonial {
   company?: string | null;
   content: string;
   rating: number;
+  facebookUrl?: string | null;
   createdAt: string;
 }
 
@@ -96,6 +97,7 @@ export interface CreateTestimonialBody {
   company?: string | null;
   content: string;
   rating: number;
+  facebookUrl?: string | null;
 }
 
 export interface TestimonialList {

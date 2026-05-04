@@ -11,9 +11,9 @@ interface SEOHeadProps {
 }
 
 export function SEOHead({
-  title = 'VibeGlobally - Premium Virtual Assistant Services | #vibeglobally',
-  description = 'Transform your business with VibeGlobally\'s professional virtual assistant services. Expert support for customer service, administrative tasks, and business operations. Available 24/7 with proven results. #vibeglobally',
-  keywords = 'virtual assistant, virtual assistant services, business support, customer service, administrative support, remote assistant, professional VA, 24/7 support, business operations, outsourcing services',
+  title = '#VibeAlong',
+  description = 'Transform your business with #VibeAlong\'s professional virtual assistant services. Expert support for customer service, administrative tasks, and business operations. Available 24/7 with proven results. #VibeAlong',
+    keywords = 'virtual assistant, virtual assistant services, business support, customer service, administrative support, remote assistant, professional VA, 24/7 support, business operations, outsourcing services, VibeAlong',
   canonical = 'https://vibeglobally.ph/',
   ogImage = 'https://vibeglobally.ph/opengraph.jpg',
   ogType = 'website',

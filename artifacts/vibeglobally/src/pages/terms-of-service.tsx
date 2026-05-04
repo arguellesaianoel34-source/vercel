@@ -47,9 +47,9 @@ export default function TermsOfService() {
   return (
     <>
       <SEOHead
-        title="Terms of Service - VibeGlobally Virtual Assistant Services"
-        description="Review VibeGlobally's terms of service to understand the rules and regulations for using our professional virtual assistant services."
-        keywords="terms of service, terms and conditions, service agreement, VibeGlobally terms"
+        title="Terms of Service | #VibeAlong"
+        description="Review #VibeAlong's terms of service to understand the rules and regulations for using our professional virtual assistant services."
+        keywords="terms of service, terms and conditions, service agreement, #VibeAlong terms"
         canonical="https://vibeglobally.com/terms-of-service"
       />
       <div className="min-h-screen flex flex-col bg-background">
