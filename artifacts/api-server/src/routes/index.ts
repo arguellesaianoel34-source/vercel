@@ -1,4 +1,4 @@
-import { Router, type IRouter } from "express";
+import { Router } from "express";
 import healthRouter from "./health";
 import authRouter from "./auth";
 import contactsRouter from "./contacts";
@@ -8,7 +8,7 @@ import statsRouter from "./stats";
 import contentRouter from "./content";
 import emailRouter from "./email";
 
-const router: IRouter = Router();
+const router = Router();
 
 router.use(healthRouter);
 router.use(authRouter);
